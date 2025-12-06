@@ -1,6 +1,6 @@
 #  Calculator
 
-A simple web-based calculator built with Flask. It supports basic arithmetic operations, tracks recent calculations, and features a clean pink-themed interface.
+A simple web-based calculator built with Flask. It supports basic arithmetic operations, tracks recent calculations, and features a pink-themed interface.
 
 ## 📁 Project Structure
 
@@ -16,13 +16,13 @@ Calculator/
 │       └── calculator.js    # Client-side functionality
 ├── templates/
 │   └── index.html           # Web interface
-├── venv/                    # Python virtual environment
 ├── .gitignore
 ├── LICENSE
 ├── requirements.txt
 └── README.md
 ```
-## 🚀 Live Demo 
+
+## 🌐 Live Demo 
 You don’t need to install anything to try the calculator — it’s already deployed on PythonAnywhere:
 👉 View the Calculator [here](https://calcles1g.pythonanywhere.com/)
 
@@ -31,19 +31,19 @@ If you’d like to run it locally:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Calculator.git
+git clone https://github.com/les1g/Calculator.git
 cd Calculator
 ```
 
-2. Create and activate virtual environment:
+2. Create and activate a virtual environment:
 ```bash
 # Windows
-python -m venv .venv
-.\.venv\Scripts\activate
+python -m venv venv
+.\venv\Scripts\activate
 
 # macOS/Linux
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 3. Install dependencies:
@@ -51,15 +51,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 💻 Usage
-
-### Running the Application
+4. Run the application 
 
 ```bash
 python app.py
 ```
-
-Open browser to `http://localhost:5000`
+Then open your browser to `http://localhost:5000`
 
 ### Keyboard Shortcuts
 
