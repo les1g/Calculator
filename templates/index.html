@@ -1,0 +1,171 @@
+<!-- jinja2 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    body { /* Cute pink theme */
+      background-color: #ffe6f0;
+      font-family: 'Comic Neue', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    body, input, button {
+        cursor: url('/static/images/custom-cursor2.png'), auto; /* Custom cursor */
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+    .calculator { /* Calculator container */        
+        background: #fff0f5;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        width: 320px;
+        flex-shrink: 0;
+    }
+    input { /* Display styling */
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 24px;
+      padding: 10px;
+      border: 2px solid #ff99cc;
+      border-radius: 10px;
+      text-align: right;
+      margin-bottom: 15px;
+      background-color: #fff0f5;
+      color: #333;
+    }
+    .buttons { /* Button grid styling */
+      display: grid; 
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    button {  /* Button styling */
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      background-color: #ffd0e6;
+      color: #333;
+      transition: background 0.2s;
+      cursor: url('/static/images/custom-cursor2.png'), pointer;
+    }
+    button:hover { /* Button hover effect */
+      background-color: #fabada;
+    }
+    .history-container {
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      flex-shrink: 0;
+    }
+    .history-container h3 {
+      margin-top: 0;
+      color: #ff1493;
+      text-align: center;
+    }
+    .history-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    .history-list li {
+      padding: 10px;
+      margin-bottom: 8px;
+      background-color: #ffd0e6;
+      border-radius: 8px;
+      color: #333;
+      font-size: 14px;
+      border-left: 4px solid #ff1493;
+    }
+    .history-list li:hover {
+      background-color: #fabada;
+      cursor: pointer;
+    }
+    .no-history {
+      text-align: center;
+      color: #999;
+      padding: 20px;
+      font-style: italic;
+    }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .calculator, .history-container {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <div class="container">
+    <div class="calculator"> 
+      <form id="calculator-form" method="POST">
+        <input type="text" id="display" name="expression" placeholder="0" value="{{ expression }}">
+        <div class="buttons">
+          <button type="button" onclick="clearDisplay()">C</button>
+          <button type="button" onclick="deleteLast()">DEL</button>
+          <button type="button" onclick="appendValue('/')">/</button>
+          <button type="button" onclick="appendValue('*')">*</button>
+
+          <button type="button" onclick="appendValue('7')">7</button>
+          <button type="button" onclick="appendValue('8')">8</button>
+          <button type="button" onclick="appendValue('9')">9</button>
+          <button type="button" onclick="appendValue('-')">-</button>
+
+          <button type="button" onclick="appendValue('4')">4</button>
+          <button type="button" onclick="appendValue('5')">5</button>
+          <button type="button" onclick="appendValue('6')">6</button>
+          <button type="button" onclick="appendValue('+')">+</button>
+
+          <button type="button" onclick="appendValue('1')">1</button>
+          <button type="button" onclick="appendValue('2')">2</button>
+          <button type="button" onclick="appendValue('3')">3</button>
+          <button type="button" onclick="calculate()">=</button>
+
+          <button type="button" onclick="appendValue('0')" style="grid-column: span 2;">0</button>
+          <button type="button" onclick="appendValue('.')">.</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="history-container">
+      <h3>📋 History</h3>
+      {% if history %}
+        <ul class="history-list">
+          {% for operation in history|reverse %}
+            <li>{{ operation }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <div class="no-history">No calculations yet</div>
+      {% endif %}
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+  <script>
+    // Initialize expression from server
+    {% if expression %}
+    expression = "{{ expression }}";
+    updateDisplay();
+    {% endif %}
+  </script>
+</body>
+</html>
