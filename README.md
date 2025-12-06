@@ -22,11 +22,11 @@ Calculator/
 ├── requirements.txt
 └── README.md
 ```
-## 🚀 Live Demo
+## 🚀 Live Demo 
 You don’t need to install anything to try the calculator — it’s already deployed on PythonAnywhere:
 👉 View the Calculator [here](https://calcles1g.pythonanywhere.com/)
 
-## 🚀 Installation (Local Development)
+## 🚀 Installation 
 If you’d like to run it locally:
 
 1. Clone the repository:
