@@ -2,8 +2,6 @@
 
 A simple web-based calculator built with Flask. It supports basic arithmetic operations, tracks recent calculations, and features a clean pink-themed interface.
 
-<div class="tenor-gif-embed" data-postid="15730562402248647971" data-share-method="host" data-aspect-ratio="1" data-width="25%"><a href="https://tenor.com/view/calculator-cute-glitter-happy-illustration-gif-15730562402248647971">Calculator Cute Sticker</a>from <a href="https://tenor.com/search/calculator-stickers">Calculator Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
-
 ## 📁 Project Structure
 
 ```
