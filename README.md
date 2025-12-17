@@ -1,139 +1,192 @@
-#  Calculator
+<a id="readme-top"></a>
 
-A simple web-based calculator built with Flask. It supports basic arithmetic operations, tracks recent calculations, and features a pink-themed interface.
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## 📁 Project Structure
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/les1g/Calculator"> 
+    <img width="195" height="137" alt="image" src="https://github.com/user-attachments/assets/2bd32c1e-1479-476b-a6f5-7262b26ab65e" />
+  </a>
+  <h3 align="center">Calculator</h3>
 
-```
-Calculator/
-├── app.py                    # Flask web application
-├── calculator/               # Calculator module
-│   ├── __init__.py
-│   └── core.py              # Core calculation logic
-├── static/
-│   ├── images/              # Custom images
-│   └── js/
-│       └── calculator.js    # Client-side functionality
-├── templates/
-│   └── index.html           # Web interface
-├── .gitignore
-├── LICENSE
-├── requirements.txt
-└── README.md
-```
+  <p align="center">
+    A simple web-based calculator built with Flask. Supports basic arithmetic, tracks recent           calculations, and features a pink-themed interface.
+    <br />
+    <a href="https://github.com/les1g/Calculator"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://calcles1g.pythonanywhere.com/">View Demo</a> •
+    <a href="https://github.com/les1g/Calculator/issues/new">Report Bug</a> •
+    <a href="https://github.com/les1g/Calculator/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
 
-## 🌐 Live Demo 
-You don’t need to install anything to try the calculator — it’s already deployed on PythonAnywhere:
-👉 View the Calculator [here](https://calcles1g.pythonanywhere.com/)
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-## 🚀 Installation 
-If you’d like to run it locally:
+<!-- ABOUT THE PROJECT -->
 
-1. Clone the repository:
-```bash
-git clone https://github.com/les1g/Calculator.git
-cd Calculator
-```
+## About The Project
 
-2. Create and activate a virtual environment:
-```bash
-# Windows
-python -m venv venv
-.\venv\Scripts\activate
+<img width="765" height="450" alt="image" src="https://github.com/user-attachments/assets/f7a14829-9419-4396-9d56-130fc808cfda" />
 
-# macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
-```
+This project is a lightweight calculator web app built with **Flask**.  
+It provides a clean interface for basic arithmetic operations, keeps track of recent calculations, and includes a playful pink theme.
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-4. Run the application 
+### Built With
 
-```bash
-python app.py
-```
-Then open your browser to `http://localhost:5000`
+- [![Python][Python]][Python-url]
+- [![Flask][Flask]][Flask-url]
+- [![HTML5][HTML5]][HTML5-url]
+- [![CSS3][CSS3]][CSS3-url]
+- [![JavaScript][JavaScript]][JavaScript-url]
 
-### Keyboard Shortcuts
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- **0-9** — Input numbers
-- **+, -, *, /** — Input operators
-- **.** — Input decimal point
-- **Enter** — Calculate result
-- **Backspace** — Delete last character
-- **ESC** — Clear display
+## Getting Started
+The is live on: https://calcles1g.pythonanywhere.com/. Alternatively, you can get a local copy up and running follow these simple example steps.
 
-### Mouse Controls
+### Prerequisites
+- Python 3.8+  
+- pip  
 
-- Click any button to input values
-- Click **=** to calculate
-- Click **C** to clear
-- Click **DEL** to delete last character
+### Installation
 
-## 🧪 Testing
+1. Clone the repo
+   ```bash
+   git clone https://github.com/les1g/Calculator.git
+   cd Calculator
+   ```
+2. Create and activate a virtual environment
+   ```bash
+   # Windows
+   python -m venv venv
+   .\venv\Scripts\activate
 
-Run the built-in tests:
+   # macOS/Linux
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install dependencies
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the application
+   ```bash
+   python app.py
+   ```
+   Then open your browser at `http://localhost:5000`
 
-```bash
-python calculator/core.py
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Output: `All tests passed!`
+## Roadmap
 
-## 📚 API Reference
+- [x] Basic arithmetic operations  
+- [x] Pink-themed UI  
+- [x] Keyboard + mouse controls  
+- [ ] History persistence across sessions  
+- [ ] Unit tests with pytest  
+- [ ] Deployment with Docker  
 
-### `add(a, b)`
-Returns the sum of two numbers.
+See the [open issues](https://github.com/les1g/Calculator/issues) for a full list of proposed features.
 
-**Parameters:**
-- `a` (int/float): First number
-- `b` (int/float): Second number
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Returns:** `int/float` — Sum of a and b
+## Contributing
 
----
+Contributions are welcome!  
+1. Fork the Project  
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)  
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)  
+4. Push to the Branch (`git push origin feature/AmazingFeature`)  
+5. Open a Pull Request
 
-### `subtract(a, b)`
-Returns the difference of two numbers (a - b).
+### Top contributors:
 
-**Parameters:**
-- `a` (int/float): First number
-- `b` (int/float): Second number
+<a href="https://github.com/les1g/Calculator/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=les1g/Calculator" />
+</a>
 
-**Returns:** `int/float` — Difference
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
+## License
 
-### `multiply(a, b)`
-Returns the product of two numbers.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-**Parameters:**
-- `a` (int/float): First number
-- `b` (int/float): Second number
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Returns:** `int/float` — Product
+## Contact
 
----
+**Gisel Garrido**  
+[@les1g.bsky.social](https://bsky.app/profile/les1g.bsky.social) • ggarr55@icloud.com  
 
-### `divide(a, b)`
-Returns the quotient of two numbers (a / b).
+Project Link: [https://github.com/les1g/Calculator](https://github.com/les1g/Calculator)
 
-**Parameters:**
-- `a` (int/float): Dividend
-- `b` (int/float): Divisor
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Returns:** `float` — Quotient
+## Acknowledgments
 
-**Raises:** `ValueError` — If divisor is zero
+- [Flask Documentation](https://flask.palletsprojects.com/)  
+- [PythonAnywhere](https://www.pythonanywhere.com/)  
+- [Shields.io](https://shields.io)  
+- [Font Awesome](https://fontawesome.com)
 
-## 📄 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>  
 
-MIT License - See [LICENSE](LICENSE) file for details
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-## 👤 Author
+[contributors-shield]: https://img.shields.io/github/contributors/les1g/Calculator.svg?style=for-the-badge
+[contributors-url]: https://github.com/les1g/Calculator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/les1g/Calculator.svg?style=for-the-badge
+[forks-url]: https://github.com/les1g/Calculator/network/members
+[stars-shield]: https://img.shields.io/github/stars/les1g/Calculator.svg?style=for-the-badge
+[stars-url]: https://github.com/les1g/Calculator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/les1g/Calculator.svg?style=for-the-badge
+[issues-url]: https://github.com/les1g/Calculator/issues
+[license-shield]: https://img.shields.io/github/license/les1g/Calculator.svg?style=for-the-badge
+[license-url]: https://github.com/les1g/Calculator/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://linkedin.com/in/gisel-garrido
+[Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[Python-url]: https://www.python.org 
+[Flask]: https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white
+[Flask-url]: https://flask.palletsprojects.com/
+[HTML5]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[HTML5-url]: https://developer.mozilla.org/docs/Web/HTML
+[CSS3]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[CSS3-url]: https://developer.mozilla.org/docs/Web/CSS
+[JavaScript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[JavaScript-url]: https://developer.mozilla.org/docs/Web/JavaScript
 
-Gisel Garrido
+
