@@ -175,7 +175,7 @@ Project Link: [https://github.com/les1g/Calculator](https://github.com/les1g/Cal
 [issues-shield]: https://img.shields.io/github/issues/les1g/Calculator.svg?style=for-the-badge
 [issues-url]: https://github.com/les1g/Calculator/issues
 [license-shield]: https://img.shields.io/badge/license-Unlicense-blue.svg?style=for-the-badge
-[license-url]: https://github.com/les1g/Calculator/blob/master/LICENSE
+[license-url]: https://github.com/les1g/Calculator/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://linkedin.com/in/gisel-garrido
 [Python]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
